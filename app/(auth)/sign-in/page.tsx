@@ -1,10 +1,11 @@
+import AuthForn from '@/components/AuthForn'
 import React from 'react'
 
 const SignIn = () => {
   return (
-    <div>
-      SignIn
-    </div>
+    <section className='flex-center size-full max-sm:px-6'>
+      <AuthForn type="sign-in" />
+    </section>
   )
 }
 

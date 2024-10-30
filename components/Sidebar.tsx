@@ -5,17 +5,17 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import Footer from './Footer'
 
 const Sidebar = ({ user }: SiderbarProps) => {
     const pathname = usePathname();
   return (
     <section className='sidebar'>
       <nav className='flex flex-col gap-4'>
-        <Link href="/" className='mb-12 cursor-pointer items-center gap-2'>
+        <Link href="/" className='mb-12 cursor-pointer flex items-center gap-2'>
             <Image 
                 src="/icons/logo.svg"
-                alt='Horizon logo'
+                alt='Horizon logo' 
                 width={34}
                 height={34}
                 className='size-[24px] max-xl:size-14'
@@ -38,7 +38,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
                     </div>
                     <p className={cn('sidebar-label', {
                         '!text-white': isActive
-                    })}>{item.label}</p>
+                    })}>{item.label}</p> 
                 </Link>
             )
         })}
@@ -46,7 +46,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
         USER
       </nav>
 
-      FOOTER
+      <Footer user={user} />
     </section>
   )
 }

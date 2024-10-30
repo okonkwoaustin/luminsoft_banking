@@ -1,10 +1,10 @@
-import React from 'react'
+import AuthForn from '@/components/AuthForn'
 
-const SignUp = () => {
+const SignUp = async () => {
   return (
-    <div>
-      SignUp
-    </div>
+    <section className='flex-center size-full max-sm:px-6'>
+      <AuthForn type="sign-up" />
+    </section>
   )
 }
 
